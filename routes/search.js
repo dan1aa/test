@@ -1,7 +1,9 @@
 const router = require('express').Router()
 
 router.get('/search', (req, res) => {
-    res.json({requestBody: req.body})
+    const { username } = req.body;
+    console.log(username)
+    res.end()
 })
 
 module.exports = router;

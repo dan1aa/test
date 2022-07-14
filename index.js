@@ -8,8 +8,8 @@ const PORT = process.env.PORT || 3000;
 
 let app = express();
 
-// const mainRoute = require('./routes/main')
-// const searchRoute = require('./routes/search')
+const mainRoute = require('./routes/main')
+const searchRoute = require('./routes/search')
 
 const hbs = exhbs.create({
     defaultLayout: "mainLayout",
@@ -30,17 +30,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// app.use(mainRoute)
-// app.use(searchRoute)
+app.use(mainRoute)
+app.use(searchRoute)
 
-app.get('/', (req, res) => {
-    res.render('main')
-})
-
-app.get('/search', (req, res) => {
-    res.render('search')
-    console.log(req.body)
-})
 
 app.listen(PORT, () => {
     console.log('server stared')
