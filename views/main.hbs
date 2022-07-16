@@ -1,5 +1,9 @@
-<h1>Found user in github by nickname!</h1>
-<form action="/search" method="GET">
-    <input type="text" name="username">
-    <button type="submit">test</button>
+<h1>Found user in github by nickname</h1>
+<span class="error_text hidden">Enter a correct value!</span>
+<form action="/search" method="POST" class="form">
+    <div class="input">
+        <input type="text" name="username" class="username_input" placeholder="Enter a username . . .">
+        <button type="submit" class="submit_button">Search</button>
+    </div>
 </form>
+<script src="main.js"></script>

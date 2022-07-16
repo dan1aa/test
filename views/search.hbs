@@ -1,1 +1,15 @@
-<h1>Search</h1>
+<div class="card">
+    <img src={{avatar}} alt="">
+    <div class="information">
+        <h3>Username: {{username}}</h3>
+        {{#if name}}
+        <h3>Username: {{name}}</h3>
+        {{else}}
+        <h3>User hasn`t name</h3>
+        {{/if}}
+        <h3>Repositories count: {{repositories}}</h3>
+        <h3>Gists count: {{gists}}</h3>
+        <h3>Followers: {{followers}}</h3>
+        <a target="_blank" href='https://github.com/{{username}}'>User profile link</a>
+    </div>
+</div>

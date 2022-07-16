@@ -10,6 +10,7 @@ let app = express();
 
 const mainRoute = require('./routes/main')
 const searchRoute = require('./routes/search')
+const errorRoute = require('./routes/error')
 
 const hbs = exhbs.create({
     defaultLayout: "mainLayout",
@@ -32,6 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(mainRoute)
 app.use(searchRoute)
+app.use(errorRoute)
 
 
 app.listen(PORT, () => {
